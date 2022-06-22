@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt-nodejs');
 /*const hash = require('bcrypt-nodejs');*/
 const cors= require('cors');
 const knex = require('knex');
+const { Client } = require('pg');
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
@@ -12,7 +13,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString : process.env.postgres-flexible-51704,
+    connectionString : process.env.DATABASE_URL,
     ssl: true,
   }
 });
