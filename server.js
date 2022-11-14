@@ -1,4 +1,3 @@
-// const supabase = require('@supabase/supabase-js')
 const express = require('express');
 const bodyParser = require('body-parser'); 
 const bcrypt = require('bcrypt-nodejs');
@@ -9,17 +8,6 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-
-// const SUPABASE_URL = 'https://poctsikqqmbbhdrizsxw.supabase.co'
-// const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvY3RzaWtxcW1iYmhkcml6c3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgyMDUwMTksImV4cCI6MTk4Mzc4MTAxOX0.YHALq8B3hgvF1smcIsvhEsaH4A7PbIuhRYWHWilG6pA'
-// const { createClient } = supabase;
-// const supabasedb = createClient(SUPABASE_URL, SUPABASE_KEY)
-
-// async function test() {
-
-// const { data: login, error } = await supabase.from('login').select('*')
-
-// }
 
 const db = knex({
   client: 'pg',
